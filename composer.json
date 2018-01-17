@@ -1,17 +1,17 @@
 {
-    "name": "overtrue/laravel-wechat",
+    "name": "llaijiale/laravel-wechat",
     "description": "微信 SDK for Laravel",
     "keywords": ["wechat", "weixin","laravel", "sdk"],
     "license": "MIT",
     "authors": [
         {
-            "name": "overtrue",
-            "email": "anzhengchao@gmail.com"
+            "name": "llaijiale",
+            "email": "872833541@gmail.com"
         }
     ],
     "require": {
         "illuminate/container": "^5.1",
-        "overtrue/wechat": "^4.0"
+        "llaijiale/wechat": "dev-master"
     },
     "autoload": {
         "psr-4": {
