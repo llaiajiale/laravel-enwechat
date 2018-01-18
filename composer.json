@@ -1,31 +1,21 @@
 {
     "name": "llaijiale/laravel-wechat",
-    "description": "微信 SDK for Laravel",
-    "keywords": ["wechat", "weixin","laravel", "sdk"],
+    "description": "wechat, wework SDK for Laravel",
+    "keywords": ["wechat", "wework","laravel", "sdk"],
     "license": "MIT",
     "authors": [
         {
             "name": "llaijiale",
-            "email": "872833541@gmail.com"
+            "email": "872833541@qq.com"
         }
     ],
     "require": {
         "illuminate/container": "^5.1",
-        "llaijiale/wechat": "V5.0.1"
+        "llaijiale/wechat": "5.0.3"
     },
     "autoload": {
         "psr-4": {
             "Overtrue\\LaravelWeChat\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Overtrue\\LaravelWeChat\\ServiceProvider"
-            ],
-            "aliases": {
-                "EasyWeChat": "Overtrue\\LaravelWeChat\\Facade"
-            }
         }
     }
 }
