@@ -11,14 +11,14 @@
 
 namespace Overtrue\LaravelWeChat\Controllers;
 
-use Barryvdh\Debugbar\LaravelDebugbar;
+//use Barryvdh\Debugbar\LaravelDebugbar;
 
 class Controller
 {
     public function __construct()
     {
-        if (class_exists(LaravelDebugbar::class)) {
-            resolve(LaravelDebugbar::class)->disable();
-        }
+//        if (class_exists("Barryvdh\Debugbar\LaravelDebugbar")) {
+//            resolve(LaravelDebugbar::class)->disable();
+//        }
     }
 }

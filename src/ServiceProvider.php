@@ -16,9 +16,7 @@ use EasyWeChat\OfficialAccount\Application as OfficialAccount;
 use EasyWeChat\OpenPlatform\Application as OpenPlatform;
 use EasyWeChat\Payment\Application as Payment;
 use EasyWeChat\Work\Application as Work;
-use Illuminate\Foundation\Application as LaravelApplication;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
-use Laravel\Lumen\Application as LumenApplication;
 
 /**
  * Class ServiceProvider.
@@ -41,10 +39,8 @@ class ServiceProvider extends LaravelServiceProvider
     {
         $source = realpath(__DIR__.'/config.php');
 
-        if ($this->app instanceof LaravelApplication && $this->app->runningInConsole()) {
+        if ($this->app->runningInConsole()) {
             $this->publishes([$source => config_path('wechat.php')], 'laravel-wechat');
-        } elseif ($this->app instanceof LumenApplication) {
-            $this->app->configure('wechat');
         }
 
         $this->mergeConfigFrom($source, 'wechat');
@@ -106,7 +102,7 @@ class ServiceProvider extends LaravelServiceProvider
 
     protected function getRouter()
     {
-        if ($this->app instanceof LumenApplication && !class_exists('Laravel\Lumen\Routing\Router')) {
+        if (!class_exists('Laravel\Lumen\Routing\Router')) {
             return $this->app;
         }
 

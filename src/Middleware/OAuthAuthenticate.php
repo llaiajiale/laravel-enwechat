@@ -13,7 +13,7 @@ namespace Overtrue\LaravelWeChat\Middleware;
 
 use Closure;
 use Event;
-use http\Env\Request;
+//use http\Env\Request;
 use Overtrue\LaravelWeChat\Events\WeChatUserAuthorized;
 use Overtrue\Socialite\User;
 
@@ -53,7 +53,7 @@ class OAuthAuthenticate
 
         if (!$session) {
             if ($request->has('code')) {
-                session([$sessionKey => $officialAccount->oauth->user() ?? []]);
+                session([$sessionKey => $officialAccount->oauth->user() ?: []]);
                 $isNewSession = true;
 
                 Event::fire(new WeChatUserAuthorized(session($sessionKey), $isNewSession, $account));
