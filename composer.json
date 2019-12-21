@@ -3,6 +3,7 @@
     "description": "wechat, wework SDK for Laravel",
     "keywords": ["wechat", "wework","laravel", "sdk"],
     "license": "MIT",
+    "version": "5.0.5",
     "authors": [
         {
             "name": "llaijiale",
@@ -14,7 +15,7 @@
         "illuminate/support": "5.2.*",
         "illuminate/http": "5.2.*",
         "illuminate/cache": "5.2.*",
-        "llaijiale/wechat": "5.0.3"
+        "llaijiale/wechat": "5.0.*"
     },
     "autoload": {
         "psr-4": {
